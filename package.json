@@ -1,0 +1,15 @@
+{
+  "name": "mcp-developer-name",
+  "version": "1.0.1",
+  "description": "MCP Developer name",
+  "bin": {
+    "mcp-developer-name": "src/index.js"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "npx @modelcontextprotocol/inspector node ./src/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.7.0"
+  }
+}
