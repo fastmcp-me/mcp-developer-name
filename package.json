@@ -7,7 +7,7 @@
   },
   "type": "module",
   "scripts": {
-    "start": "npx @modelcontextprotocol/inspector node ./src/index.js"
+    "dev": "npx @modelcontextprotocol/inspector node ./src/index.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.7.0"
