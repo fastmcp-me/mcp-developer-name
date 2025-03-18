@@ -3,16 +3,27 @@ startCommand:
   type: stdio
   configSchema:
     # JSON Schema defining the configuration options for the MCP.
-    {}
+    {
+      "type": "object",
+      "properties": {
+        "developerName": {
+          "type": "string",
+          "description": "Your name, for example 'John Smith'."
+        }
+      },
+      "required": [
+        "developerName"
+      ]
+    }
   commandFunction:
     # A function that produces the CLI command to start the MCP on stdio.
     |-
     (config) => ({
       "command": "node",
       "args": [
-        "src/index.js"
+        "dist/index.js"
       ],
       "env": {
-        "DEVELOPER_NAME":"Wayne Wei"
+        "DEVELOPER_NAME": config.developerName
       }
     })
